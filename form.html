@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" href="form.css">
+    </head>
+    <body>
+        <div class="container"> 
+            <h1 class="text-center">Form đăng kí</h1> 
+            <div class="row"> 
+             <div class="col-xs-12 col-sm-12 col-md-6 well well-sm col-md-offset-6"> 
+              <form action="nothing.asp" method="post" class="form" role="form" id="myForm" name="myForm" onsubmit="return validateForm()"> 
+                <div class="row">
+                    <div class="col-xs-6 col-md-6"><label for="firstname">Họ<span>*</span></label></div>
+                    <div class="col-xs-6 col-md-6"><label for="lastname">Tên<span>*</span></label></div></div>
+                <div class="row"> 
+                <div class="col-xs-6 col-md-6"><input class="form-control" name="firstname" placeholder="Họ" type="text"> 
+                </div> 
+                <div class="col-xs-6 col-md-6"><input class="form-control" name="lastname" placeholder="Tên" type="text"> 
+                </div> 
+                <div class="col-xs-6 col-md-6"><label for="email">Email<span>*</span></label></div>
+               </div> <input class="form-control" name="email" placeholder="Email" type="email"> 
+               <div class="row">
+                <div class="col-xs-6 col-md-6"><label for="password">Mật khẩu (6-30 kí tự)<span>*</span></label></div>
+                <div class="col-xs-6 col-md-6"><label for="retypepassword">Nhập lại mật khẩu<span>*</span></label></div></div>
+               <div class="row" >
+                <div class="col-xs-6 col-md-6">
+               <input class="form-control" name="password" placeholder="Mật khẩu" type="password" ></div>
+               <div class="col-xs-6 col-md-6">
+               <input class="form-control" name="retypepassword" placeholder="Nhập lại mật khẩu" type="password"></div>
+                </div>             
+               <div class="row">             
+                <div class="col-xs-6 col-md-6"> 
+                    <div class="row" style="padding-left: 15px;"><label for=""> Năm sinh<span>*</span></label>
+                    <select class="form-control" style="width: 45%;" name="year">
+                        <option value="select" selected>-chọn-</option>
+                        <option value="select">1990</option>
+                        <option value="select">1991</option>
+                        <option value="select">1992</option>
+                        <option value="select">1993</option>
+                        <option value="select">1994</option>
+                        <option value="select">1995</option>
+                        <option value="select">1996</option>
+                        <option value="select">1997</option>
+                        <option value="select">1998</option>
+                        <option value="select">1999</option>
+                        <option value="select">2000</option>
+                    </select> 
+                </div>
+                <div class="row " style="padding-left: 15px;"><label for="">Thành phố<span>*</span></label>
+                    <select class="form-control" style="width: 45%;" name="city">
+                        <option value="select" selected>-chọn-</option>
+                        <option value="select">Hà Nội</option>
+                        <option value="select">Hải Phòng</option>
+                        <option value="select">Đà Nẵng</option>
+                        <option value="select">Quảng Ninh</option>
+                        <option value="select">Cần Thơ</option>
+                        <option value="select">Vinh</option>
+                        <option value="select">TP. Hồ Chí Minh</option>
+                    </select> 
+                </div></div> 
+                <div class="col-xs-6 col-md-6">
+                    <div class="row"></div>
+                <label for="sex"> Giới tính<span>*</span></label>  
+                <input name="sex" id="inlineCheckbox1" value="male" type="radio" selected>Nam </label>&ensp;&ensp;&ensp;
+                <input name="sex" id="inlineCheckbox2" value="female" type="radio" selected> Nữ</label></div>  
+                </div></div> 
+               <br><br> 
+              <button class="btn btn-lg btn-success" type="button" onclick="validateForm()"> Đăng ký</button>
+              </form> 
+             </div> 
+            </div>
+           </div>
+           <script >
+               function validateForm() {
+                    document.getElementById("myForm").action = "";
+                    var x = document.forms["myForm"]["firstname"].value;
+                        y = document.forms["myForm"]["lastname"].value;
+                        z = document.forms["myForm"]["password"].value;
+                        a = document.forms["myForm"]["retypepassword"].value;
+                        b = document.forms["myForm"]["email"].value;
+                    if (x == "") {
+                        alert("Hãy nhập tên");
+                        return false;
+                    }
+                    else if (y =="") {
+                        alert("Hãy nhập họ");
+                        return false;
+                    }
+                    else if (z =="") {
+                        alert("Nhập mật khẩu");
+                        return false;
+                    }
+                    else if (z !=a && a=="") {
+                        alert("Mật khẩu không khớp");
+                        return false;
+                    }
+                    else if (b =="") {
+                        alert("Hãy nhập email");
+                        return false;
+                    }
+                    else {
+                        alert("Chúc mừng bạn đã đăng kí thành công");
+                    }
+                    var ele = document.getElementsByName("sex"); 
+                        for(i = 0; i < ele.length; i++) { 
+                            if(ele[i].checked); 
+                            alert(radios[i].value);
+                            break;
+                    }
+               }         
+           </script>
+    </body>
+</html>
