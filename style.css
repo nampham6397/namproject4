@@ -1,0 +1,71 @@
+body {
+  background: darkblue;
+  padding: 0px;
+  margin: 0px;
+}
+header {
+  text-align: center;
+  margin: 0px 0px 20px 0px;
+  background-color: #00ffff;
+  padding: 5px;
+}
+.title-row {
+  text-align: center;
+  margin: 10px auto;
+  padding-bottom: 25px;
+}
+#instructions-title {
+  display: inline;
+  font-size: 30px;
+  color: #00ffff;
+  
+}
+.instructions-row {
+  text-align: center;
+  width: 400px;
+  margin: 0px auto;
+}
+.table-number {
+  font-size: 26px;
+  color: #00ffff;
+  padding-right: 20px;
+}
+.table-text {
+  color: white;
+}
+.door-row {
+  text-align: center;
+  margin-top: 20px auto;
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+.door-frame {
+  padding-right: 5px;
+  cursor: pointer;
+}
+.start-row {
+  text-align: center;
+  margin: 10px auto;
+  width: 100px;
+  padding: 20px 10px;
+  background: orange;
+  cursor: pointer;
+}
+
+.record {
+  width: 240px;
+  margin: auto;
+  margin-top: 20px;
+  color: white;
+  font-size: 14px;
+  text-align: center;
+}
+
+.score {
+  background-color: lightblue;
+  width: 60%;
+  margin: auto;
+  height: 80px;
+  padding-top: 6px;
+  font-size: 50px;
+}
